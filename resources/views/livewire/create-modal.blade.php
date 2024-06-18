@@ -35,7 +35,8 @@
                         <div class="mb-5">
                             <label for="titulo" class="block mb-2 font-bold font-roboto">Título</label>
                             <input type="text" wire:model="titulo" id="titulo"
-                                class="block w-full px-3 py-2 bg-gray-100 font-varela" placeholder="Ingresa el título" />
+                                class="block w-full px-3 py-2 bg-gray-100 font-varela"
+                                placeholder="Ingresa el título" />
                             @error('titulo')
                             <div class="py-2 text-red-400">{{ $message }}</div>
                             @enderror
@@ -84,7 +85,7 @@
                                 @error('categorias')
                                 <div class="py-2 text-red-400">{{ $message }}</div>
                                 @enderror
-                                </div>
+                            </div>
 
                             <div class="">
                                 <label for="anio_publicacion" class="block mb-2 font-bold font-roboto">Año</label>
@@ -102,13 +103,14 @@
                         <div class="flex flex-col">
 
                             @if ($imagen)
-                                <img class="object-cover" src="{{ $imagen?->temporaryUrl() }}" alt="">
+                            <img class="object-cover" src="{{ $imagen?->temporaryUrl() }}" alt="">
                             @endif
 
                             <label for="imagen" class="block mb-2 font-bold font-roboto">Imágen</label>
-                            <input type="file" wire:loading.attr="disabled" wire:model="imagen" id="imagen" class="block w-full py-3 font-varela">
+                            <input type="file" wire:loading.attr="disabled" wire:model="imagen" id="imagen"
+                                class="block w-full py-3 font-varela">
                             @error('imagen')
-                                <div class="py-2 text-red-400">{{ $message }}</div>
+                            <div class="py-2 text-red-400">{{ $message }}</div>
                             @enderror
                         </div>
                     </div>
@@ -116,9 +118,9 @@
                 <!-- Modal footer -->
                 <div class="flex items-center gap-4 p-4 border-t border-gray-200 rounded-b md:justify-end md:p-5">
                     <button wire:click="hideModal" type="button"
-                        class="py-2 text-base font-medium text-[#aaaaaa] uppercase transition-all duration-200 border-2 rounded hover:scale-110 px-7 font-roboto border-[#aaaaaa]  focus:ring-gray-100">Cancelar</button>
+                        class="py-2 text-base font-medium text-[#aaaaaa] uppercase transition-all duration-200 border-2 rounded hover:scale-110 px-7 font-roboto border-[#aaaaaa]  ">Cancelar</button>
                     <button wire:click="Grabar" type="button"
-                        class="py-2 text-base font-medium text-black uppercase transition-all duration-200 border-2 rounded hover:scale-110 px-7 font-roboto border-rosa bg-rosa focus:ring-gray-100">
+                        class="py-2 text-base font-medium text-black uppercase transition-all duration-200 border-2 border-black rounded hover:scale-110 px-7 font-roboto ">
                         Grabar</button>
                 </div>
             </div>
