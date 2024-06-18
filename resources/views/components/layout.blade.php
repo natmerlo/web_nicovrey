@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,12 +14,14 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
     @vite('resources/css/app.css')
 
     @livewireStyles
     <title>{{ $title }} | Nico V Rey</title>
 </head>
+
 <body>
     <header>
         @livewire('nav-bar')
@@ -27,8 +30,14 @@
         {{ $slot }}
     </main>
     <footer>
-       @livewire('footer')
+        @livewire('footer')
     </footer>
     @livewireScripts
+
+    <script src="{{ asset('js/wow.min.js') }}"></script>
+    <script>
+        new WOW().init();
+    </script>
 </body>
+
 </html>
