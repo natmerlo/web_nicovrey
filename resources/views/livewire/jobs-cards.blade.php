@@ -11,7 +11,7 @@
         </div>
         @endif
     </div>
-    <div class="flex flex-wrap justify-center max-w-screen-xl gap-16 mx-auto ">
+    <div class="flex flex-wrap justify-center max-w-screen-xl gap-16 mx-auto wow animate__animated animate__fadeInLeft animate__slow">
         @foreach($trabajos as $trabajo)
         <a href="#">
             <div class="max-w-[280px]">

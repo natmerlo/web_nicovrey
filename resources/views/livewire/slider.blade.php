@@ -1,7 +1,7 @@
 <div>
     @if (!$id % 2 === 0)
     <div class="bg-black">
-        <div class="grid items-start px-4 py-12 mx-auto md:px-16 lg:px-24 md:grid-cols-2 md:pt-24 max-w-screen-2xl">
+        <div class="grid items-start px-4 py-12 mx-auto md:px-16 lg:px-24 md:grid-cols-2 md:pt-24 max-w-screen-2xl wow animate__animated animate__fadeIn ">
 
             <div id="{{$categoria}}" class="flex flex-col justify-center">
                 <h2
@@ -48,7 +48,7 @@
     </div>
     @endif
     <div class="bg-negro">
-        <div class="grid items-start px-4 py-12 mx-auto md:px-16 lg:px-24 md:grid-cols-2 md:pt-24 max-w-screen-2xl">
+        <div class="grid items-start px-4 py-12 mx-auto md:px-16 lg:px-24 md:grid-cols-2 md:pt-24 max-w-screen-2xl wow animate__animated animate__fadeIn ">
 
             <div id="{{$categoria}}" class="flex flex-col justify-center order-2">
                 <h2

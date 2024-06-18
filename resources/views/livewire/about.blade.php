@@ -1,9 +1,9 @@
 <div class=" bg-gris" id="sobre-mi">
     <div class="flex px-6 py-16 mx-auto max-w-screen-2xl md:px-16 lg:px-24">
         <div class="text-left">
-            <h2 class="mb-4 text-2xl font-semibold uppercase font-roboto wow animate__animated animate__bounce">Sobre mi</h2>
+            <h2 class="mb-4 text-2xl font-semibold uppercase font-roboto ">Sobre mi</h2>
 
-            <div class="flex flex-col md:flex-row gap-7">
+            <div class="flex flex-col md:flex-row gap-7 wow animate__animated animate__fadeIn">
                 <div class="w-full space-y-4 md:w-1/2 font-varela">
                     <p class="">Nací en el año 89, en el barrio de Almagro. Soy el menor de cuatro hermanos,
                         clave para
