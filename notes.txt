@@ -1,0 +1,5 @@
+- Imagenes nulleables
+- ¿Paginación?
+- Links en trabajos
+- Slider que empiece automaticamente + loop
+- Validación (español)
