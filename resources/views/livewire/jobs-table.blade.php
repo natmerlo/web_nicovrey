@@ -1,7 +1,7 @@
-<div class="px-4 md:px-16 lg:px-24 max-w-screen-2xl mx-auto">
-    <h2 class="text-3xl text-center md:text-start font-semibold uppercase py-9 md:text-4xl font-roboto text-blanco">Panel de Administración</h2>
+<div class="px-4 mx-auto mb-12 md:px-16 lg:px-24 max-w-screen-2xl">
+    <h2 class="text-3xl font-semibold text-center uppercase md:text-start py-9 md:text-4xl font-roboto text-blanco">Panel de Administración</h2>
 
-    <div class="justify-end flex">
+    <div class="flex justify-end">
         @livewire('create-modal')
     </div>
 
@@ -22,7 +22,7 @@
 
             <tbody class="flex-1 sm:flex-none">
                 @foreach ($trabajos as $trabajo)
-                <tr class="flex flex-col mb-2 flex-no wrap sm:table-row sm:mb-0 overflow-x-auto">
+                <tr class="flex flex-col mb-2 overflow-x-auto flex-no wrap sm:table-row sm:mb-0">
                     <td class="p-3 bg-white border border-grey-light"> {{$trabajo->titulo}} </td>
                     <td class="p-3 truncate bg-white border border-grey-light"> {{$trabajo->descripcion}}
                     </td>
@@ -31,9 +31,8 @@
                     <td class="p-3 truncate bg-white border border-grey-light"> {{$trabajo->anio_publicacion}}
                     </td>
                     <td class="p-3 truncate bg-white border border-grey-light ">
-                        <div class="flex justify-evenly ">
+                        <div class="flex justify-evenly">
                             @livewire('editarmodal',['id' => $trabajo->id], key(uniqid()))
-
 
                             <button wire:click="Eliminar({{ $trabajo->id }})">
                                 <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round"
