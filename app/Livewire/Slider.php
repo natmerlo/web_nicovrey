@@ -13,7 +13,7 @@ class Slider extends Component
     public $id;
     public $categoria;
     public $trabajos;
-    public $verPar;
+
 
     public function mount($id, $categoria)
     {
@@ -27,21 +27,14 @@ class Slider extends Component
         $this->trabajos = tab_trabajos_por_categ::where('id_categoria', $this->id)->get();
 
         // Si la categoría es "sound designer", mostrar el botón
-        if ($this->categoria === "Mix & Mastering") {
+        if ($this->categoria === "Sound Designer") {
             $this->mostrarBoton = true;
         }
 
-        $par = $this->id % 2 === 0; // Si el índice es par, $par será true; de lo contrario, será false
-        $this->verPar = $par;
+        // $par = $this->id % 2 === 0; // Si el índice es par, $par será true; de lo contrario, será false
+        // $this->verPar = $par;
 
-        return view('livewire.slider', [
-            'orderClass' => '2',
-            'h2Class' => $par ? 'md:text-end' : 'md:text-start',
-            'buttonClass' => $par ? 'md:justify-start ' : 'md:justify-end 2xl:mr-14',
-            'linkClass' => $par ? 'md:justify-end' : 'md:justify-start',
-            'bg' => $par ? 'bg-negro' : 'bg-black',
-
-        ]);
+        return view('livewire.slider');
 
     }
 }
