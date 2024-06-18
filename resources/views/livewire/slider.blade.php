@@ -1,17 +1,17 @@
-
 <div>
     @if (!$id % 2 === 0)
     <div class="bg-black">
         <div class="grid items-start px-4 py-12 mx-auto md:px-16 lg:px-24 md:grid-cols-2 md:pt-24 max-w-screen-2xl">
 
-            <div class="flex flex-col justify-center">
+            <div id="{{$categoria}}" class="flex flex-col justify-center">
                 <h2
                     class="my-12 mb-4 text-4xl font-semibold text-center uppercase md:text-5xl text-blanco font-roboto md:mt-0 md:text-start">
                     {{$categoria}}</h2>
 
                 @if($mostrarBoton)
                 <div class="flex justify-center mb-6 md:justify-normal">
-                    <a href="" class=" text-xl text-[#7C7C7C] hover:transition-all hover:text-rosa font-roboto">Solicitar
+                    <a href=""
+                        class=" text-xl text-[#7C7C7C] hover:transition-all hover:text-rosa font-roboto">Solicitar
                         reel por
                         mail</a>
                 </div>
@@ -37,7 +37,9 @@
                 </div>
 
                 <div class="flex justify-center mt-12 text-white md:mt-8 2xl:ml-14 md:justify-end">
-                    <button>ver más</button>
+                    <a href="{{route('jobs')}}#{{$categoria}}" class="py-2 text-base font-medium text-white uppercase transition-all duration-200 border-2 rounded hover:scale-110 px-7 font-roboto border-blanco focus:ring-gray-100">ver
+                        más
+                    </a>
                 </div>
 
             </div>
@@ -48,14 +50,15 @@
     <div class="bg-negro">
         <div class="grid items-start px-4 py-12 mx-auto md:px-16 lg:px-24 md:grid-cols-2 md:pt-24 max-w-screen-2xl">
 
-            <div class="flex flex-col justify-center order-2">
+            <div id="{{$categoria}}" class="flex flex-col justify-center order-2">
                 <h2
                     class="my-12 mb-4 text-4xl font-semibold text-center uppercase md:text-5xl text-blanco font-roboto md:mt-0 md:text-end">
                     {{$categoria}}</h2>
 
                 @if($mostrarBoton)
                 <div class="flex justify-center mb-6 md:justify-normal">
-                    <a href="" class=" text-xl text-[#7C7C7C] hover:transition-all hover:text-rosa font-roboto">Solicitar
+                    <a href=""
+                        class=" text-xl text-[#7C7C7C] hover:transition-all hover:text-rosa font-roboto">Solicitar
                         reel por
                         mail</a>
                 </div>
@@ -81,7 +84,10 @@
                 </div>
 
                 <div class="flex justify-center mt-12 text-white md:mt-8 2xl:ml-14 md:justify-start">
-                    <button>ver más</button>
+                    <a href="{{route('jobs')}}#{{$categoria}}"
+                        class="py-2 text-base font-medium text-white uppercase transition-all duration-200 border-2 rounded hover:scale-110 px-7 font-roboto border-blanco focus:ring-gray-100">ver
+                        más
+                    </a>
                 </div>
 
             </div>

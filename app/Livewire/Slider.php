@@ -31,9 +31,6 @@ class Slider extends Component
             $this->mostrarBoton = true;
         }
 
-        // $par = $this->id % 2 === 0; // Si el índice es par, $par será true; de lo contrario, será false
-        // $this->verPar = $par;
-
         return view('livewire.slider');
 
     }
