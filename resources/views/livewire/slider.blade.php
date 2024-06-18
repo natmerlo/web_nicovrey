@@ -1,7 +1,8 @@
 <div>
     @if (!$id % 2 === 0)
     <div class="bg-black">
-        <div class="grid items-start px-4 py-12 mx-auto md:px-16 lg:px-24 md:grid-cols-2 md:pt-24 max-w-screen-2xl wow animate__animated animate__fadeIn ">
+        <div
+            class="grid items-start px-4 py-12 mx-auto md:px-16 lg:px-24 md:grid-cols-2 md:pt-24 max-w-screen-2xl wow animate__animated animate__fadeIn ">
 
             <div id="{{$categoria}}" class="flex flex-col justify-center">
                 <h2
@@ -37,7 +38,8 @@
                 </div>
 
                 <div class="flex justify-center mt-12 text-white md:mt-8 2xl:ml-14 md:justify-end">
-                    <a href="{{route('jobs')}}#{{$categoria}}" class="py-2 text-base font-medium text-white uppercase transition-all duration-200 border-2 rounded hover:scale-110 px-7 font-roboto border-blanco focus:ring-gray-100">ver
+                    <a href="{{route('jobs')}}#{{$categoria}}"
+                        class="py-2 text-base font-medium text-white uppercase transition-all duration-200 border-2 rounded hover:scale-110 px-7 font-roboto border-blanco focus:ring-gray-100">ver
                         más
                     </a>
                 </div>
@@ -48,7 +50,8 @@
     </div>
     @endif
     <div class="bg-negro">
-        <div class="grid items-start px-4 py-12 mx-auto md:px-16 lg:px-24 md:grid-cols-2 md:pt-24 max-w-screen-2xl wow animate__animated animate__fadeIn ">
+        <div
+            class="grid items-start px-4 py-12 mx-auto md:px-16 lg:px-24 md:grid-cols-2 md:pt-24 max-w-screen-2xl wow animate__animated animate__fadeIn ">
 
             <div id="{{$categoria}}" class="flex flex-col justify-center order-2">
                 <h2
@@ -71,9 +74,11 @@
                     <div class="swiper-wrapper">
 
                         @foreach($trabajos as $trabajo)
-                        <div class="swiper-slide md:w-[250px] lg:w-[230px]">
-                            <img class="w-full" src="{{ asset('img/img_trabajos') . '/' . $trabajo->imagen }}" />
-                        </div>
+
+                            <div class="swiper-slide md:w-[250px] lg:w-[230px]">
+                                <img class="w-full" src="{{ asset('img/img_trabajos') . '/' . $trabajo->imagen }}" />
+                            </div>
+                     
                         @endforeach
 
                     </div>
@@ -100,6 +105,7 @@
     import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
 
         var swiper = new Swiper(".mySwiper", {
+            autoplay: true,
             effect: "coverflow",
             grabCursor: true,
             centeredSlides: true,

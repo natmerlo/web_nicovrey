@@ -45,7 +45,7 @@ class CreateModal extends Component
 
     public function Grabar()
     {
-       
+
         $validatedData = $this->validate([
             'titulo' => 'required|string',
             'descripcion' => 'nullable|string',
@@ -53,6 +53,10 @@ class CreateModal extends Component
             'anio_publicacion' => 'nullable|integer',
             'imagen' => 'image|max:1024',
             'categorias' => 'required|array|min:1'
+        ],[
+            'titulo.required' => 'El título es obligatorio',
+            'categorias.required' => 'Debes seleccionar al menos una categoría',
+            'imagen' => 'Debes ingresar una imágen'
         ]);
 
         $pathImg = $this->imagen->store('img_trabajos', 'pathImg');

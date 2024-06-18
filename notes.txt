@@ -1,5 +1,4 @@
 - Imagenes nulleables
 - ¿Paginación?
-- Links en trabajos
-- Slider que empiece automaticamente + loop
-- Validación (español)
+- Slider que empiece automaticamente + loop [X]
+- Validación (español) []

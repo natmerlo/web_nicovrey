@@ -63,6 +63,10 @@ class Editarmodal extends Component
             'anio_publicacion' => 'nullable|integer',
             'imagen' => 'nullable|image',
             'categorias' => 'required|array|min:1'
+        ],[
+            'titulo.required' => 'El título es obligatorio',
+            'categorias.required' => 'Debes seleccionar al menos una categoría',
+            'imagen' => 'Debes ingresar una imágen'
         ]);
 
         if($this->imagen){
@@ -71,7 +75,7 @@ class Editarmodal extends Component
                 File::delete($rutaArchivo);
             }
             $pathImg = $this->imagen->store('img_trabajos', 'pathImg');
-      
+
             DB::table('trabajos')
                 ->where('id', $this->id)
                 ->update([
