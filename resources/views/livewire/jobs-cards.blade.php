@@ -13,7 +13,7 @@
     </div>
     <div class="flex flex-wrap justify-center max-w-screen-xl gap-16 mx-auto wow animate__animated animate__fadeInLeft animate__slow">
         @foreach($trabajos as $trabajo)
-        <a href="#">
+        <a href="{{$trabajo->url}}" target="_blank">
             <div class="max-w-[280px]">
                 <img src="{{ asset('img/img_trabajos') . '/' . $trabajo->imagen }}" alt="">
                 <div
